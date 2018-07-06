@@ -1,18 +1,13 @@
 FROM node:8-alpine
-
 WORKDIR /app
-ENV USER node
 
-RUN apk update && \
-  apk add --no-cache \
-  curl \
-  curl-dev
+RUN apk --no-cache add \
+  curl
 
-COPY . /app
-RUN chown -R $USER:$USER /app
-
-USER $USER
+COPY package.json .
 
 RUN yarn
+
+COPY . .
 
 CMD [ "yarn", "start" ]
