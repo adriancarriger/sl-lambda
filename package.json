@@ -1,6 +1,7 @@
 {
   "name": "2",
   "version": "1.0.0",
+  "author": "Adrian Carriger <hello@adriancarriger.com> (http://adriancarriger.com)",
   "description": "",
   "main": "handler.js",
   "scripts": {
